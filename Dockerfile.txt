@@ -1,0 +1,8 @@
+FROM python:3.9-alpine
+RUN apk add --no-cache gcc g++ musl-dev python3-dev
+RUN pip install neuralforecast fastapi uvicorn pandas
+WORKDIR /app
+COPY neuralforecast_api.py .
+COPY run.sh .
+RUN chmod +x run.sh
+CMD ["./run.sh"]

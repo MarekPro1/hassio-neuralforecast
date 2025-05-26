@@ -1,0 +1,15 @@
+name: NeuralForecast
+version: 1.0.0
+slug: neuralforecast
+description: NeuralForecast API for time-series forecasting
+arch: [aarch64, amd64, armhf, armv7, i386]
+ports:
+  8000/tcp: 8000
+ports_description:
+  8000/tcp: NeuralForecast API port
+startup: application
+boot: auto
+map:
+  - config:rw
+options: {}
+schema: {}
